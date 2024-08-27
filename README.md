@@ -26,7 +26,7 @@ This specific section is a source for the [plugin.xml](/src/main/resources/META-
 To keep everything working, do not remove `<!-- ... -->` sections. 
 <!-- Plugin description end -->
 
-## Installation
+## 🚀 Installation
 
 - Using the IDE built-in plugin system:
   
