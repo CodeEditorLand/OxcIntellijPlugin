@@ -1,0 +1,23 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.github.iwanabethatguy.oxcintellijplugin</id>
+    <name>Oxc</name>
+    <vendor>iwanabethatguy</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>JavaScript</depends>
+
+    <resource-bundle>messages.MyBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <platform.lsp.serverSupportProvider implementation="com.github.iwanabethatguy.oxcintellijplugin.lsp.OxcLspServerSupportProvider"/>
+        <applicationService serviceImplementation="com.github.iwanabethatguy.oxcintellijplugin.settings.OxcSettingsState"/>
+
+        <applicationConfigurable
+                parentId="tools"
+                instance="com.github.iwanabethatguy.oxcintellijplugin.settings.OxcSettingsConfigurable"
+                id="Settings.Oxc"
+                groupId="language"
+                />
+    </extensions>
+</idea-plugin>
